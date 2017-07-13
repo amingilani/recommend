@@ -1,0 +1,32 @@
+<div class="ui text container">
+  <h1>Recommendation Letter for SM Amin Gilani</h1>
+  <%= simple_form_for @recommendation, html: {class: 'ui form'} do |f| %>
+      <p>
+        To:
+        <strong>United States Citizenship and Immigration Services</strong><br>
+        Attn: I-140<br>
+        P.O. Box 660128<br>
+        Dallas, TX 75266
+      </p>
+      <%= f.input :body, label: false, label_html: {style: 'display: none;'}, input_html: { rows: 58} %>
+      <fieldset>
+        <legend>Personal Details</legend>
+      <%= f.input :name, placeholder: 'Amin Shah Gilani', label_html: {style: 'display: none;'} %>
+      <%= f.input :phone_number, placeholder: '(415) 890 4346', label_html: {style: 'display: none;'} %>
+      <%= f.input :email, placeholder: 'gilani@payload.tech', label_html: {style: 'display: none;'} %>
+      <%= f.input :position, placeholder: 'Chief Executive Officer', label_html: {style: 'display: none;'} %>
+      <%= f.input :organization, placeholder: 'Payload Technologies Inc.', label_html: {style: 'display: none;'} %>
+    </fieldset>
+    <fieldset>
+      <legend>Mailing Address</legend>
+      <%= f.input :address_line_1, placeholder: '548 Market St #65723', label_html: {style: 'display: none;'} %>
+      <%= f.input :address_line_2, placeholder: 'Apt 34', label_html: {style: 'display: none;'} %>
+      <%= f.input :address_city, placeholder: 'San Francisco', label_html: {style: 'display: none;'} %>
+      <div class="ui inline fields">
+      <%= f.input :address_state, placeholder: 'California', label_html: {style: 'display: none;'} %> <%= f.input :address_zip, placeholder: '94104', label_html: {style: 'display: none;'} %>
+      </div>
+      <%= f.input :address_country, placeholder: 'USA', label_html: {style: 'display: none;'}, input_html: {class: 'ui select dropdown'} %>
+    </fieldset>
+    <%= f.submit :sign, class: 'ui button' %>
+  <% end %>
+</div>
