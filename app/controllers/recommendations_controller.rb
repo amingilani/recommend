@@ -9,7 +9,7 @@ class RecommendationsController < ApplicationController
   def create
     @recommendation = Recommendation.new recommendation_params
     if @recommendation.save
-      flash[:notice] = 'Thank you, please check your email to sign'
+      flash[:notice] = 'Email sent! please check your inbox to sign the recommendation!'
       return redirect_to @recommendation
     end
     flash[:error] = @recommendation.errors.full_messages.join(", ")
