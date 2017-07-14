@@ -24,6 +24,12 @@
 # **`address_country`**   | `string`           |
 # **`created_at`**        | `datetime`         | `not null`
 # **`updated_at`**        | `datetime`         | `not null`
+# **`slug`**              | `string`           | `not null`
+#
+# ### Indexes
+#
+# * `index_recommendations_on_slug` (_unique_):
+#     * **`slug`**
 #
 
 class Recommendation < ApplicationRecord
@@ -38,4 +44,15 @@ class Recommendation < ApplicationRecord
   validates_presence_of :address_state
   validates_presence_of :address_zip
   validates_presence_of :address_country
+
+  before_create :set_slug
+
+  private
+
+  def set_slug
+    loop do
+      self.slug = SecureRandom.uuid
+      break unless Recommendation.where(slug: slug).exists?
+    end
+  end
 end

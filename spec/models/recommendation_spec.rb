@@ -24,6 +24,12 @@
 # **`address_country`**   | `string`           |
 # **`created_at`**        | `datetime`         | `not null`
 # **`updated_at`**        | `datetime`         | `not null`
+# **`slug`**              | `string`           | `not null`
+#
+# ### Indexes
+#
+# * `index_recommendations_on_slug` (_unique_):
+#     * **`slug`**
 #
 
 require 'rails_helper'
