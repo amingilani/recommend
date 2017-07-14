@@ -5,3 +5,15 @@
 .indented {
   padding-left: 1em;
 }
+
+#letter {
+  margin-top: 20px;
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  input[type=submit] {
+    margin-top: 10px;
+  }
+}
