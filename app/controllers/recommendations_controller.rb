@@ -17,7 +17,7 @@ class RecommendationsController < ApplicationController
   end
 
   def show
-    @recommendation = Recommendation.find params[:id]
+    @recommendation = Recommendation.find_by slug: params[:slug]
   end
 
   private
