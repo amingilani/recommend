@@ -1,4 +1,3 @@
-# <!-- BEGIN ANNOTATION -->
 # ## Schema Information
 #
 # Table name: `recommendations`
@@ -11,11 +10,9 @@
 # **`name`**              | `string`           |
 # **`email`**             | `string`           |
 # **`phone_number`**      | `string`           |
-# **`phone_extension`**   | `string`           |
 # **`fax_number`**        | `string`           |
 # **`organization`**      | `string`           |
 # **`position`**          | `string`           |
-# **`subject`**           | `string`           |
 # **`body`**              | `text`             |
 # **`signature_id`**      | `string`           |
 # **`signature_status`**  | `integer`          |
@@ -28,7 +25,6 @@
 # **`created_at`**        | `datetime`         | `not null`
 # **`updated_at`**        | `datetime`         | `not null`
 #
-# <!-- END ANNOTATION -->
 
 require 'rails_helper'
 
