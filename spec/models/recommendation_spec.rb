@@ -30,17 +30,25 @@
 #
 # <!-- END ANNOTATION -->
 
-class Recommendation < ApplicationRecord
-  validates_presence_of :name
-  validates_presence_of :email
-  validates_presence_of :phone_number
-  validates_presence_of :fax_number
-  validates_presence_of :organization
-  validates_presence_of :position
-  validates_presence_of :body
-  validates_presence_of :address_line_1
-  validates_presence_of :address_city
-  validates_presence_of :address_state
-  validates_presence_of :address_zip
-  validates_presence_of :address_country
+require 'rails_helper'
+
+RSpec.describe Recommendation, type: :model do
+    it 'should be invalid if empty' do
+    recommendation = Recommendation.new
+    recommendation.valid?
+    expect(recommendation.errors.keys).to include(
+      :name,
+      :email,
+      :phone_number,
+      :fax_number,
+      :organization,
+      :position,
+      :body,
+      :address_line_1,
+      :address_city,
+      :address_state,
+      :address_zip,
+      :address_country
+    )
+  end
 end

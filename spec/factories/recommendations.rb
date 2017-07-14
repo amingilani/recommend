@@ -30,17 +30,21 @@
 #
 # <!-- END ANNOTATION -->
 
-class Recommendation < ApplicationRecord
-  validates_presence_of :name
-  validates_presence_of :email
-  validates_presence_of :phone_number
-  validates_presence_of :fax_number
-  validates_presence_of :organization
-  validates_presence_of :position
-  validates_presence_of :body
-  validates_presence_of :address_line_1
-  validates_presence_of :address_city
-  validates_presence_of :address_state
-  validates_presence_of :address_zip
-  validates_presence_of :address_country
+FactoryGirl.define do
+  factory :recommendation do
+    name 'John Smith'
+    email 'abc@hello.com'
+    phone_number '415 111 1111'
+    fax_number '415 111 1111'
+    organization 'Acme Corp'
+    position 'Founter & CEO'
+    body 'asdasda asdasda asdasd'
+    signature_id
+    signature_status
+    address_line_1 '33 Market St'
+    address_city 'Random City'
+    address_state 'California'
+    address_zip '94104'
+    address_country 'US'
+  end
 end
