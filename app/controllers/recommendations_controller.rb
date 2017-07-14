@@ -5,4 +5,28 @@ class RecommendationsController < ApplicationController
       address_country: 'US'
     )
   end
+
+  def create
+    @recommendation = Recommendation.new recommendation_params
+    if @recommendation.save
+      flash[:notice] = 'Thank you, please check your email to sign'
+      return redirect_to @recommendation
+    end
+    flash[:error] = @recommendation.errors.full_messages.join(", ")
+    redirect_to new_recommendation_path(@recommendation)
+  end
+
+  def show
+    @recommendation = Recommendation.find params[:id]
+  end
+
+  private
+
+  def recommendation_params
+    form_attributes = %i( name email phone_number fax_number organization
+                          position body address_line_1 address_line_2
+                          address_city address_state address_zip
+                          address_country )
+    params.require(:recommendation).permit(*form_attributes)
+  end
 end
