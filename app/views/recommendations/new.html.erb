@@ -9,25 +9,39 @@
           Dallas, TX 75266
         </p>
         <%= f.input :body, label: false, label_html: {style: 'display: none;'}, input_html: { rows: 58} %>
+        <fieldset class="letter fieldset">
+          <legend>Personal</legend>
+          <%= f.input :name, placeholder: 'Amin Shah Gilani' %>
+          <div class="two fields">
+            <%= f.input :position, placeholder: 'Founder & CEO' %>
+            <%= f.input :organization, placeholder: 'Payload Technologies Inc.' %>
+          </div>
+        </fieldset class="letter fieldset">
         <fieldset>
-          <legend>Personal Details</legend>
-        <%= f.input :name, placeholder: 'Amin Shah Gilani', label_html: {style: 'display: none;'} %>
-        <%= f.input :phone_number, placeholder: '(415) 890 4346', label_html: {style: 'display: none;'} %>
-        <%= f.input :email, placeholder: 'gilani@payload.tech', label_html: {style: 'display: none;'} %>
-        <%= f.input :position, placeholder: 'Founder & CEO', label_html: {style: 'display: none;'} %>
-        <%= f.input :organization, placeholder: 'Payload Technologies Inc.', label_html: {style: 'display: none;'} %>
-      </fieldset>
-      <fieldset>
-        <legend>Mailing Address</legend>
-        <%= f.input :address_line_1, placeholder: '548 Market St #65723', label_html: {style: 'display: none;'} %>
-        <%= f.input :address_line_2, placeholder: 'Apt 34', label_html: {style: 'display: none;'} %>
-        <%= f.input :address_city, placeholder: 'San Francisco', label_html: {style: 'display: none;'} %>
-        <div class="ui inline fields">
-        <%= f.input :address_state, placeholder: 'California', label_html: {style: 'display: none;'} %> <%= f.input :address_zip, placeholder: '94104', label_html: {style: 'display: none;'} %>
-        </div>
-        <%= f.input :address_country, placeholder: 'USA', label_html: {style: 'display: none;'}, input_html: {class: 'ui select dropdown'} %>
-      </fieldset>
-        <%= f.submit 'Sign', class: 'ui button' %>
+          <legend>Contact</legend>
+          <%= f.input :email, placeholder: 'gilani@payload.tech' %>
+          <div class="two fields">
+          <%= f.input :phone_number, placeholder: '(415) 890 4346' %>
+          <%= f.input :fax_number, placeholder: '(415) 890 4347' %>
+          </div>
+          <div class="fields">
+            <div class="twelve wide field">
+              <%= f.input :address_line_1, label: 'Street Address', placeholder: '548 Market St #65723' %>
+            </div>
+            <div class="four wide field">
+              <%= f.input :address_line_2, label: 'Apt', placeholder: 'Apt 34' %>
+            </div>
+          </div>
+          <%= f.input :address_city, label: 'City', placeholder: 'San Francisco' %>
+          <div class="ui two fields">
+          <%= f.input :address_state, label: 'State', placeholder: 'California' %> <%= f.input :address_zip, label: 'Zip', placeholder: '94104' %>
+          </div>
+          <%= f.input :address_country, label: 'Country', placeholder: 'USA', input_html: {class: 'ui select dropdown'} %>
+        </fieldset>
+        <%= f.button :button, class: 'ui labeled icon button' do %>
+          <i class="ui write icon"></i>
+          Email &amp; Sign
+        <% end %>
     <% end %>
   </div>
 </div>
