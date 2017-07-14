@@ -29,14 +29,13 @@
 require 'rails_helper'
 
 RSpec.describe Recommendation, type: :model do
-    it 'should be invalid if empty' do
+  it 'should be invalid if empty' do
     recommendation = Recommendation.new
     recommendation.valid?
     expect(recommendation.errors.keys).to include(
       :name,
       :email,
       :phone_number,
-      :fax_number,
       :organization,
       :position,
       :body,

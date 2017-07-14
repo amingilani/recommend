@@ -31,12 +31,9 @@ FactoryGirl.define do
     name 'John Smith'
     email 'abc@hello.com'
     phone_number '415 111 1111'
-    fax_number '415 111 1111'
     organization 'Acme Corp'
     position 'Founter & CEO'
     body 'asdasda asdasda asdasd'
-    signature_id
-    signature_status
     address_line_1 '33 Market St'
     address_city 'Random City'
     address_state 'California'

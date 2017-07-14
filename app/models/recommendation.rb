@@ -30,7 +30,6 @@ class Recommendation < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :email
   validates_presence_of :phone_number
-  validates_presence_of :fax_number
   validates_presence_of :organization
   validates_presence_of :position
   validates_presence_of :body
