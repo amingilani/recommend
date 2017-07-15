@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'country_select'
 gem 'annotate'
 gem 'kramdown'
+gem 'get_accept'
 
 # pdf generation
 gem 'wicked_pdf'
