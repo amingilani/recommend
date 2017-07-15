@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714213312) do
+ActiveRecord::Schema.define(version: 20170715054332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "recommendations", force: :cascade do |t|
-    t.string "name"
     t.string "email"
     t.string "phone_number"
     t.string "fax_number"
@@ -34,6 +33,8 @@ ActiveRecord::Schema.define(version: 20170714213312) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.index ["slug"], name: "index_recommendations_on_slug", unique: true
   end
 

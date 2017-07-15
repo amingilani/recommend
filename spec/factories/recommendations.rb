@@ -7,7 +7,6 @@
 # Name                    | Type               | Attributes
 # ----------------------- | ------------------ | ---------------------------
 # **`id`**                | `integer`          | `not null, primary key`
-# **`name`**              | `string`           |
 # **`email`**             | `string`           |
 # **`phone_number`**      | `string`           |
 # **`fax_number`**        | `string`           |
@@ -25,6 +24,8 @@
 # **`created_at`**        | `datetime`         | `not null`
 # **`updated_at`**        | `datetime`         | `not null`
 # **`slug`**              | `string`           | `not null`
+# **`first_name`**        | `string`           | `not null`
+# **`last_name`**         | `string`           | `not null`
 #
 # ### Indexes
 #
@@ -34,7 +35,8 @@
 
 FactoryGirl.define do
   factory :recommendation do
-    name 'John Smith'
+    first_name 'John'
+    last_name 'Smith'
     email 'abc@hello.com'
     phone_number '415 111 1111'
     organization 'Acme Corp'

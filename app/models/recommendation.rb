@@ -7,7 +7,6 @@
 # Name                    | Type               | Attributes
 # ----------------------- | ------------------ | ---------------------------
 # **`id`**                | `integer`          | `not null, primary key`
-# **`name`**              | `string`           |
 # **`email`**             | `string`           |
 # **`phone_number`**      | `string`           |
 # **`fax_number`**        | `string`           |
@@ -25,6 +24,8 @@
 # **`created_at`**        | `datetime`         | `not null`
 # **`updated_at`**        | `datetime`         | `not null`
 # **`slug`**              | `string`           | `not null`
+# **`first_name`**        | `string`           | `not null`
+# **`last_name`**         | `string`           | `not null`
 #
 # ### Indexes
 #
@@ -33,7 +34,8 @@
 #
 
 class Recommendation < ApplicationRecord
-  validates_presence_of :name
+  validates_presence_of :first_name
+  validates_presence_of :last_name
   validates_presence_of :email
   validates_presence_of :phone_number
   validates_presence_of :organization
@@ -49,6 +51,10 @@ class Recommendation < ApplicationRecord
 
   def to_param
     slug
+  end
+
+  def name
+    "#{first_name} #{last_name}"
   end
 
   def body_pretty
