@@ -18,6 +18,10 @@ class RecommendationsController < ApplicationController
 
   def show
     @recommendation = Recommendation.find_by slug: params[:slug]
+    respond_to do |format|
+      format.html
+      format.pdf { render pdf: "recommendation-#{@recommendation.slug}" }
+    end
   end
 
   private

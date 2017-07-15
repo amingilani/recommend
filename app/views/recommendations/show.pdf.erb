@@ -1,0 +1,40 @@
+<div id="letter">
+  <h1 class="ui center aligned header">Recommending SM Amin Gilani</h1>
+  <p>
+      <strong><%= @recommendation.name %></strong> <br>
+      Tel: <%= @recommendation.phone_number %><br >
+
+      <% if @recommendation.fax_number.present? %>
+      Fax: <%= @recommendation.fax_number%><br >
+      <% end %>
+
+      Email: <%= @recommendation.email %><br >
+      <%= @recommendation.address_line_1 %>
+      <% if @recommendation.address_line_2.present? %>
+      , <%= @recommendation.address_line_2 %>
+      <% end %>
+      <br >
+      <%= @recommendation.address_city %>,
+      <%= @recommendation.address_state %> <%= @recommendation.address_zip %> <br>
+      <%= @recommendation.address_country %>
+  </p>
+  <p>
+    <strong>United States Citizenship and Immigration Services</strong><br>
+    Attn: I-140<br>
+    P.O. Box 660128<br>
+    Dallas, TX 75266 <br>
+    United States of America
+  </p>
+
+  <p><strong>RE: EB2 NATIONAL INTEREST WAIVER - PERMANENT RESIDENCY (SM AMIN GILANI)</strong></p>
+
+  <p>
+    <%= sanitize @recommendation.body_pretty %>
+  </p>
+
+  <p>
+    <strong><%= @recommendation.name %></strong> <br>
+    <%= @recommendation.position %><br >
+    <%= @recommendation.organization %><br >
+  </p>
+</div>
