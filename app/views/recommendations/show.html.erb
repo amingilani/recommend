@@ -2,7 +2,7 @@
   <div class="ui segment">
     <h1 class="ui center aligned header">Recommendation Letter for SM Amin Gilani</h1>
     <p>
-        <%= @recommendation.name %>
+        <strong><%= @recommendation.name %></strong> <br>
         Tel: <%= @recommendation.phone_number %><br >
 
         <% if @recommendation.fax_number.present? %>
@@ -20,18 +20,20 @@
         <%= @recommendation.address_country %>
     </p>
     <p>
-      United States Citizenship and Immigration Services<br>
+      <strong>United States Citizenship and Immigration Services</strong><br>
       Attn: I-140<br>
       P.O. Box 660128<br>
       Dallas, TX 75266
     </p>
+
+    <p><strong>RE: EB2 NATIONAL INTEREST WAIVER - PERMANENT RESIDENCY (SM AMIN GILANI)</strong></p>
 
     <p>
       <%= sanitize @recommendation.body_pretty %>
     </p>
 
     <p>
-      <%= @recommendation.name %>
+      <strong><%= @recommendation.name %></strong> <br>
       <%= @recommendation.position %><br >
       <%= @recommendation.organization %><br >
     </p>
