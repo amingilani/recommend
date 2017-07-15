@@ -34,9 +34,10 @@
           </div>
           <%= f.input :address_city, label: 'City', placeholder: 'San Francisco' %>
           <div class="ui two fields">
-          <%= f.input :address_state, label: 'State', placeholder: 'California' %> <%= f.input :address_zip, label: 'Zip', placeholder: '94104' %>
+          <%= f.input :address_state, label: 'State / Province', placeholder: 'CA', input_html: {class: 'ui search addable selection dropdown'}, collection: us_states %>
+          <%= f.input :address_zip, label: 'Zip / Postal', placeholder: '94104' %>
           </div>
-          <%= f.input :address_country, label: 'Country', placeholder: 'USA', input_html: {class: 'ui select dropdown'} %>
+          <%= f.input :address_country, label: 'Country', placeholder: 'USA', input_html: {class: 'ui search selection dropdown'} %>
         </fieldset>
         <%= f.button :button, class: 'ui labeled icon button' do %>
           <i class="ui write icon"></i>
