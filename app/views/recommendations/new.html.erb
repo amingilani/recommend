@@ -11,7 +11,10 @@
         <%= f.input :body, label: false, label_html: {style: 'display: none;'}, input_html: { rows: 58} %>
         <fieldset class="letter fieldset">
           <legend>Personal</legend>
-          <%= f.input :name, placeholder: 'Amin Shah Gilani' %>
+          <div class="two fields">
+            <%= f.input :first_name, placeholder: 'Amin' %>
+            <%= f.input :last_name, placeholder: 'Gilani' %>
+          </div>
           <div class="two fields">
             <%= f.input :position, placeholder: 'Founder & CEO' %>
             <%= f.input :organization, placeholder: 'Payload Technologies Inc.' %>
