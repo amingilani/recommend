@@ -55,6 +55,10 @@ class Recommendation < ApplicationRecord
     Kramdown::Document.new(body).to_html
   end
 
+  def address_country_pretty
+    ISO3166::Country[address_country]
+  end
+
   private
 
   def set_slug
