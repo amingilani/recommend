@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 gem 'country_select'
 gem 'annotate'
+gem 'kramdown'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

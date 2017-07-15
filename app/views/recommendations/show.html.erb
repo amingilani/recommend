@@ -1,1 +1,40 @@
-<%= @recommendation.inspect %>
+<div id="letter">
+  <div class="ui segment">
+    <h1 class="ui center aligned header">Recommendation Letter for SM Amin Gilani</h1>
+    <p>
+        <%= @recommendation.name %>
+        Tel: <%= @recommendation.phone_number %><br >
+
+        <% if @recommendation.fax_number.present? %>
+        Fax: <%= @recommendation.fax_number%><br >
+        <% end %>
+
+        Email: <%= @recommendation.email %><br >
+        <%= @recommendation.address_line_1 %>
+        <% if @recommendation.address_line_2.present? %>
+        , <%= @recommendation.address_line_2 %>
+        <% end %>
+        <br >
+        <%= @recommendation.address_city %> <br>
+        <%= @recommendation.address_state %>, <%= @recommendation.address_zip %> <br>
+        <%= @recommendation.address_country %>
+    </p>
+    <p>
+      United States Citizenship and Immigration Services<br>
+      Attn: I-140<br>
+      P.O. Box 660128<br>
+      Dallas, TX 75266
+    </p>
+
+    <p>
+      <%= sanitize @recommendation.body_pretty %>
+    </p>
+
+    <p>
+      <%= @recommendation.name %>
+      <%= @recommendation.position %><br >
+      <%= @recommendation.organization %><br >
+    </p>
+
+  </div>
+</div>

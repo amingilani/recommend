@@ -51,6 +51,10 @@ class Recommendation < ApplicationRecord
     slug
   end
 
+  def body_pretty
+    Kramdown::Document.new(body).to_html
+  end
+
   private
 
   def set_slug
