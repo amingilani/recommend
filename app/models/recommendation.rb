@@ -70,7 +70,7 @@ class Recommendation < ApplicationRecord
 
   private
 
-  def phone_number_formatted
+  def set_phone_number_formatted
     phone = TelephoneNumber.parse(phone_number, address_country)
     self.phone_number_formatted = "+#{phone.international_number}" if phone.valid?
   end
