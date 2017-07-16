@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715235901) do
+ActiveRecord::Schema.define(version: 20170716192712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20170715235901) do
     t.string "position"
     t.text "body"
     t.string "signature_id"
-    t.integer "signature_status"
     t.string "address_line_1"
     t.string "address_line_2"
     t.string "address_city"
@@ -50,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170715235901) do
     t.string "slug", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
+    t.datetime "signature_date"
     t.index ["slug"], name: "index_recommendations_on_slug", unique: true
   end
 

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post '/recommendations/:slug/deliver' => 'recommendations#deliver', as: :deliver_recommendation
   get '/recommendations/:slug/done'    => 'recommendations#done',    as: :done_recommendation
 
+  post 'hooks/get_accept' => 'hooks/get_accept#notification'
+
 end
