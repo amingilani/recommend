@@ -8,6 +8,7 @@ class GetAcceptService
 
   def send_for_signature(r)
     return puts 'sent to sign for #{r.first_name}' unless Rails.env.production?
+    begin
     @api.document.create('name':                 'Recommending Amin Gilani',
                          'external_id':          r.slug,
                          'file_url':             Rails.application.routes.url_helpers.recommendation_path(r, format: :pdf),
@@ -25,8 +26,9 @@ class GetAcceptService
                          'is_signing_forward':   false,
                          'is_sms_sending':       false,
                          'is_automatic_sending': true)
-  rescue GetAccept::RequestError
-    set_api
+    rescue GetAccept::RequestError
+      set_api
+    end
   end
 
   private
