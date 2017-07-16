@@ -36,8 +36,8 @@ class RecommendationsController < ApplicationController
   end
 
   def recommendation_params
-    form_attributes = %i( name email phone_number fax_number organization
-                          position body address_line_1 address_line_2
+    form_attributes = %i( first_name last_name email phone_number fax_number
+                          organization position body address_line_1 address_line_2
                           address_city address_state address_zip
                           address_country )
     params.require(:recommendation).permit(*form_attributes)
