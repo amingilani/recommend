@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class Logger
+class GetAcceptService
   include Singleton
 
   def initialize
@@ -7,6 +7,7 @@ class Logger
   end
 
   def send_for_signature(r)
+    return puts 'sent to sign for #{r.first_name}' unless Rails.env.production?
     @api.document.create('name':                 'Recommending Amin Gilani',
                          'external_id':          r.slug,
                          'file_url':             recommendation_path(r, format: :pdf),

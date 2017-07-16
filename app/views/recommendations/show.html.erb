@@ -39,7 +39,7 @@
       <%= @recommendation.organization %><br >
     </p>
 
-    <%= link_to '#', class: 'ui labeled green icon button' do %>
+    <%= link_to deliver_recommendation_path(@recommendation), data: {method: :post}, class: 'ui labeled green icon button' do %>
       <i class="ui write icon"></i>
       Finalize &amp; Sign
     <% end %>

@@ -1,4 +1,6 @@
 class RecommendationsController < ApplicationController
+  before_action :set_recommendation, only: [:show, :deliver]
+
   def new
     @recommendation = Recommendation.new(
       body: File.read(Rails.root + 'lib/template-letter.txt'),
@@ -17,14 +19,21 @@ class RecommendationsController < ApplicationController
   end
 
   def show
-    @recommendation = Recommendation.find_by slug: params[:slug]
     respond_to do |format|
       format.html
       format.pdf { render pdf: "recommendation-#{@recommendation.slug}" }
     end
   end
 
+  def deliver()
+    SendForSignatureJob.perform_later @recommendation
+  end
+
   private
+
+  def set_recommendation
+    @recommendation = Recommendation.find_by slug: params[:slug]
+  end
 
   def recommendation_params
     form_attributes = %i( name email phone_number fax_number organization

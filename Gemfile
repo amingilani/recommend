@@ -16,6 +16,8 @@ gem 'country_select'
 gem 'annotate'
 gem 'kramdown'
 gem 'get_accept'
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 # pdf generation
 gem 'wicked_pdf'
