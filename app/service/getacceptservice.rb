@@ -11,7 +11,7 @@ class GetAcceptService
     begin
     @api.document.create('name':                 'Recommending Amin Gilani',
                          'external_id':          r.slug,
-                         'file_url':             Rails.application.routes.url_helpers.recommendation_path(r, format: :pdf),
+                         'file_url':             "https://recommend.gilani.me#{Rails.application.routes.url_helpers.recommendation_path(r, format: :pdf)}",
                          'type':                 'other',
                          'recipients':           [{
                            'email':      r.email,
