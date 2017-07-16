@@ -5,6 +5,6 @@ class ThanksMailer < ApplicationMailer
 
     mail to:      @r.email,
          subject: 'Thank you',
-         from:    'amin@gilani.me'
+         from:    'Amin Shah Gilani <amin@gilani.me>'
   end
 end
