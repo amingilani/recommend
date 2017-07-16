@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class RecommendationsController < ApplicationController
-  before_action :set_recommendation, only: %i(show deliver edit update)
+  before_action :set_recommendation, only: %i(show deliver done edit update)
 
   def new
     @recommendation = Recommendation.new(
@@ -28,7 +28,10 @@ class RecommendationsController < ApplicationController
 
   def deliver
     SendForSignatureJob.perform_later @recommendation
+    redirect_to done_recommendation_path(@recommendation)
   end
+
+  def done; end
 
   def edit; end
 
