@@ -13,13 +13,7 @@ class GetAcceptService
                                  'external_id':          r.slug,
                                  'file_url':             "https://recommend.gilani.me#{Rails.application.routes.url_helpers.recommendation_path(r, format: :pdf)}",
                                  'type':                 'other',
-                                 'recipients':           [{
-                                   'email':      r.email,
-                                   'first_name': r.first_name,
-                                   'last_name':  r.last_name,
-                                   'role':       'signer',
-                                   'order_num':  0
-                                 }],
+                                 'recipients':           [recepient_data(r)],
                                  'is_signing':           true,
                                  'is_signing_biometric': true,
                                  'is_reminder_sending':  true,
@@ -33,6 +27,22 @@ class GetAcceptService
   end
 
   private
+
+  def recepient_data(r)
+    data = {
+      'email':      r.email,
+      'first_name': r.first_name,
+      'last_name':  r.last_name,
+      'role':       'signer',
+      'order_num':  0
+    }
+    unless r.phone_number_formatted.blank?
+      data['mobile'] = r.phone_number_formatted
+      data['verify_sms'] = true
+      date['verify_sms_sign'] = true
+    end
+    data
+  end
 
   def set_api
     @token = GetAccept::Api.get_token(
