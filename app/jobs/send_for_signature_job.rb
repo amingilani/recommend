@@ -1,3 +1,4 @@
+require Rails.root.join('app','services', 'get_accept_service.rb')
 class SendForSignatureJob < ApplicationJob
   queue_as :default
 
