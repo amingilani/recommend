@@ -1,31 +1,33 @@
+# frozen_string_literal: true
 # ## Schema Information
 #
 # Table name: `recommendations`
 #
 # ### Columns
 #
-# Name                   | Type               | Attributes
-# ---------------------- | ------------------ | ---------------------------
-# **`id`**               | `integer`          | `not null, primary key`
-# **`email`**            | `string`           |
-# **`phone_number`**     | `string`           |
-# **`fax_number`**       | `string`           |
-# **`organization`**     | `string`           |
-# **`position`**         | `string`           |
-# **`body`**             | `text`             |
-# **`signature_id`**     | `string`           |
-# **`address_line_1`**   | `string`           |
-# **`address_line_2`**   | `string`           |
-# **`address_city`**     | `string`           |
-# **`address_state`**    | `string`           |
-# **`address_zip`**      | `string`           |
-# **`address_country`**  | `string`           |
-# **`created_at`**       | `datetime`         | `not null`
-# **`updated_at`**       | `datetime`         | `not null`
-# **`slug`**             | `string`           | `not null`
-# **`first_name`**       | `string`           | `not null`
-# **`last_name`**        | `string`           | `not null`
-# **`signature_date`**   | `datetime`         |
+# Name                          | Type               | Attributes
+# ----------------------------- | ------------------ | ---------------------------
+# **`id`**                      | `integer`          | `not null, primary key`
+# **`email`**                   | `string`           |
+# **`phone_number`**            | `string`           |
+# **`fax_number`**              | `string`           |
+# **`organization`**            | `string`           |
+# **`position`**                | `string`           |
+# **`body`**                    | `text`             |
+# **`signature_id`**            | `string`           |
+# **`address_line_1`**          | `string`           |
+# **`address_line_2`**          | `string`           |
+# **`address_city`**            | `string`           |
+# **`address_state`**           | `string`           |
+# **`address_zip`**             | `string`           |
+# **`address_country`**         | `string`           |
+# **`created_at`**              | `datetime`         | `not null`
+# **`updated_at`**              | `datetime`         | `not null`
+# **`slug`**                    | `string`           | `not null`
+# **`first_name`**              | `string`           | `not null`
+# **`last_name`**               | `string`           | `not null`
+# **`signature_date`**          | `datetime`         |
+# **`phone_number_formatted`**  | `string`           |
 #
 # ### Indexes
 #
@@ -34,20 +36,22 @@
 #
 
 class Recommendation < ApplicationRecord
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :email
-  validates_presence_of :phone_number
-  validates_presence_of :organization
-  validates_presence_of :position
-  validates_presence_of :body
-  validates_presence_of :address_line_1
-  validates_presence_of :address_city
-  validates_presence_of :address_state
-  validates_presence_of :address_zip
-  validates_presence_of :address_country
+  validates :first_name,      presence: true
+  validates :last_name,       presence: true
+  validates :email,           presence: true
+  validates :phone_country,   presence: true
+  validates :phone_number,    presence: true
+  validates :organization,    presence: true
+  validates :position,        presence: true
+  validates :body,            presence: true
+  validates :address_line_1,  presence: true
+  validates :address_city,    presence: true
+  validates :address_state,   presence: true
+  validates :address_zip,     presence: true
+  validates :address_country, presence: true
 
   before_create :set_slug
+  before_save :set_phone_number_formatted
 
   def to_param
     slug
@@ -66,6 +70,11 @@ class Recommendation < ApplicationRecord
   end
 
   private
+
+  def phone_number_formatted
+    phone = TelephoneNumber.parse(phone_number, address_country)
+    self.phone_number_formatted = "+#{phone.international_number}" if phone.valid?
+  end
 
   def set_slug
     loop do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716192712) do
+ActiveRecord::Schema.define(version: 20170716221411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170716192712) do
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.datetime "signature_date"
+    t.string "phone_number_formatted"
     t.index ["slug"], name: "index_recommendations_on_slug", unique: true
   end
 

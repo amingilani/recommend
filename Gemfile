@@ -18,6 +18,7 @@ gem 'kramdown'
 gem 'get_accept'
 gem 'delayed_job_active_record'
 gem 'daemons'
+gem 'telephone_number'
 
 # pdf generation
 gem 'wicked_pdf'
