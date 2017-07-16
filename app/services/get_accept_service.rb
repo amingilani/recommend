@@ -39,7 +39,7 @@ class GetAcceptService
     unless r.phone_number_formatted.blank?
       data['mobile'] = r.phone_number_formatted
       data['verify_sms'] = true
-      date['verify_sms_sign'] = true
+      data['verify_sms_sign'] = true
     end
     data
   end
