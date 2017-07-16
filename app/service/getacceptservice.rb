@@ -10,7 +10,7 @@ class GetAcceptService
     return puts 'sent to sign for #{r.first_name}' unless Rails.env.production?
     @api.document.create('name':                 'Recommending Amin Gilani',
                          'external_id':          r.slug,
-                         'file_url':             recommendation_path(r, format: :pdf),
+                         'file_url':             Rails.application.routes.url_helpers.recommendation_path(r, format: :pdf),
                          'type':                 'other',
                          'recipients':           [{
                            'email':      r.email,
