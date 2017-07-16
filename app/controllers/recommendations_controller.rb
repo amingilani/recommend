@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class RecommendationsController < ApplicationController
-  before_action :set_recommendation, only: %i(show deliver edit)
+  before_action :set_recommendation, only: %i(show deliver edit update)
 
   def new
     @recommendation = Recommendation.new(
@@ -31,6 +31,15 @@ class RecommendationsController < ApplicationController
   end
 
   def edit; end
+
+  def update
+    if @recommendation.update(recommendation_params)
+      flash[:notice] = 'Recommendation updated! Please review and sign.'
+    else
+      flash[:error] = @recommendation.errors.full_messages.join(', ')
+    end
+    redirect_to @recommendation
+  end
 
   private
 
