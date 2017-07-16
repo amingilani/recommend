@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 class RecommendationsController < ApplicationController
-  before_action :set_recommendation, only: [:show, :deliver]
+  before_action :set_recommendation, only: %i(show deliver edit)
 
   def new
     @recommendation = Recommendation.new(
-      body: File.read(Rails.root + 'lib/template-letter.txt'),
+      body:            File.read(Rails.root + 'lib/template-letter.txt'),
       address_country: 'US'
     )
   end
@@ -11,10 +12,10 @@ class RecommendationsController < ApplicationController
   def create
     @recommendation = Recommendation.new recommendation_params
     if @recommendation.save
-      flash[:notice] = 'Email sent! please check your inbox to sign the recommendation!'
+      flash[:notice] = 'New recommendation created! Please review and sign.'
       return redirect_to @recommendation
     end
-    flash[:error] = @recommendation.errors.full_messages.join(", ")
+    flash[:error] = @recommendation.errors.full_messages.join(', ')
     redirect_to new_recommendation_path(@recommendation)
   end
 
@@ -25,9 +26,11 @@ class RecommendationsController < ApplicationController
     end
   end
 
-  def deliver()
+  def deliver
     SendForSignatureJob.perform_later @recommendation
   end
+
+  def edit; end
 
   private
 
