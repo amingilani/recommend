@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :staffs
+  get 'dashboard/index'
+
+  devise_for :staffs, controllers: {
+    sessions: 'staffs/sessions'
+  }
   root 'static_pages#home'
 
   resources :recommendations, param: :slug
