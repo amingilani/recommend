@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :staffs
   root 'static_pages#home'
 
   resources :recommendations, param: :slug
