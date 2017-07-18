@@ -6,7 +6,6 @@
     "jquery": "1.11.3",
     "jquery.scrollex": "^0.2.1",
     "jquery.scrolly": "^0.0.1",
-    "semantic-ui": "^2.2.11",
     "skel-framework-npm": "^1.0.1"
   }
 }
