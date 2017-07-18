@@ -11,5 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require semantic-ui/dist/semantic.min.js
 //= require ./cable.js
 //= require_tree ./controllers/
