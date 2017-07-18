@@ -1,5 +1,11 @@
 {
   "name": "recommend",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "1.11.3",
+    "jquery.scrollex": "^0.2.1",
+    "jquery.scrolly": "^0.0.1",
+    "skel-framework-npm": "^1.0.1"
+  }
 }
