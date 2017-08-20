@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # ## Schema Information
 #
 # Table name: `recommendations`
@@ -66,6 +67,15 @@ class Recommendation < ApplicationRecord
 
   def address_country_pretty
     ISO3166::Country[address_country]
+  end
+
+  def to_pdf
+    WickedPdf.new.pdf_from_string RecommendationsController.render(
+      template: 'recommendations/show.pdf.erb',
+      layout:   'layouts/pdf.html.erb',
+      assigns:  { recommendation: self },
+      encoding: 'utf8'
+    )
   end
 
   private
