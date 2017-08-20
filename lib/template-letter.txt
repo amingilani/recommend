@@ -2,29 +2,9 @@ Dear USCIS Officer,
 
 I am writing this letter of support for SM Amin Gilani with respect to his Permanent Residency application in the category EB-2 National Interest Waiver.
 
-<!-- REPLACE THIS ENTIRE PARAGRAPH
+<!-- REPLACE THIS LINE WITH AN AboutMe PARAGRAPH  -->
 
-Talk a bit about yourself, your accomplishments, and the USCIS should listen to you. Don't be humble. Talk about everything awesome you've ever done.
-
-Talk about the responsibilities you've taken in your life, the kind of projects you've contributed to, and the kind of work you've done.
-
-Sample:
-
-My name is Steve Jobs. In 1976 I co-founded Apple, a company that went on to dominate the global technology industry and in 2017 became the most valuable company of all time. After founding Apple I also contributed to several other major companies such as NeXT, a company that was bought by Apple in 1997, and funded what is now known as Pixar, a computer animation company.
-
-REPLACE THIS ENTIRE PARAGRAPH -->
-
-<!-- REPLACE THIS ENTIRE PARAGRAPH
-
-Talk a bit about yourself, your accomplishments, and why the USCIS should listen to you. Don't be humble. Talk about everything awesome you've ever done. (COMMENT: You mean to say talk a bit about you, Amin, and how we know you, no?)
-
-Talk about the responsibilities you've taken in your life, the kind of projects you've contributed to, and the kind of work you've done.
-
-Sample:
-
-I first met Amin in the fall of 2015 in San Mateo, as a startup founder for a Silicon Valley VC funded company. Amin spent most of his nights working on his company software, and would sometimes work out of the office for days, straight, without regard to his personal health. I believe Amin is one of the most passionate founders I have met and when driven, does not rest until he has achieved his tasks.
-
-REPLACE THIS ENTIRE PARAGRAPH -->
+<!-- REPLACE THIS LINE WITH AN AboutAmin PARAGRAPH  -->
 
 While I do not know Amin very well personally, I am very familiar with his knowledge of software engineering, his entrepreneurial spirit and his various contributions to open source projects in the form of reports and code. Amin has proven himself to be an expert engineer having won multiple international and hackathons, and by passing screening for Toptal, a US engineering firm that approves less than 3% of applicants; making it more selective about its partners than the Navy SEALs. Amin has also proven his recognition in the entrepreneurial ecosystem by having his startup picked out of over 2,000 in 2015 by Plan9, Pakistan and over 300 possible software solutions by Boost VC.
 
