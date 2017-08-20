@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class GetAcceptService
   include Singleton
 
@@ -7,11 +8,11 @@ class GetAcceptService
   end
 
   def send_for_signature(r)
-    return puts 'sent to sign for #{r.first_name}' unless Rails.env.production?
+    return Rails.logger 'sent to sign for #{r.first_name}' unless Rails.env.production?
     begin
       res = @api.document.create('name':                 'Recommending Amin Gilani',
                                  'external_id':          r.slug,
-                                 'file_url':             "https://recommend.gilani.me#{Rails.application.routes.url_helpers.recommendation_path(r, format: :pdf)}",
+                                 'file_content':         Base64.encode64(r.to_pdf),
                                  'type':                 'other',
                                  'recipients':           [recepient_data(r)],
                                  'is_signing':           true,
@@ -20,10 +21,12 @@ class GetAcceptService
                                  'is_signing_forward':   false,
                                  'is_sms_sending':       false,
                                  'is_automatic_sending': true)
-      r.update(signature_id: res['id'])
-    rescue GetAccept::RequestError
+    rescue GetAccept::RequestError => e
+      Rails.logger "Get Accept Error: #{e.response_body}"
       set_api
+      send_for_signature(r)
     end
+    r.update(signature_id: res['id'])
   end
 
   private
@@ -36,7 +39,7 @@ class GetAcceptService
       'role':       'signer',
       'order_num':  0
     }
-    unless r.phone_number_formatted.blank?
+    if r.phone_number_formatted.present?
       data['mobile'] = r.phone_number_formatted
       data['verify_sms'] = true
       data['verify_sms_sign'] = true
