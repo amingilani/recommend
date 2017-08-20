@@ -1,58 +1,43 @@
-Dear Sir/Madam:
+Dear USCIS Officer,
 
-I am pleased to write this letter of support for Dr. Jan Novak’s petition for a National Interest
-Waiver with respect to his application for Permanent Residency. I am a Professor of Physics and
-the Department Chairperson in the Physics Department at the U.S. Regionally Accredited
-University #2. I have received federal research funding during my career in excess of $13 Million
-from Federal agencies including Top National Agency (TNA) and Another National Agency. My
-research specialties include astro-particle physics, space radiation dosimetry, particle detector
-development, relativistic heavy ion physics, and particle transport simulation. I have known Dr.
-Novak since 2008 and I am familiar with his research in the area of the active pixel-based charged
-particle detectors, and in particular his work with the Detimage pixel detectors. In addition, as
-Department Chair, I have been serving for the past year as his mentor for his current post-doctoral
-fellowship in the Physics Department at the U.S. Regionally Accredited University #2.
-Having done his Ph.D. thesis research with our Detimage collaborators at the Physics Laboratory
-of the Average European Technical University in European City, Dr. Novak’s unique expertise
-has been invaluable in preparing the Radiation Monitoring Detector Project (RMDP) Detimage-
-based devices for their current deployment on the International Space Station (ISS) as part of an
-Advanced Monitor Experiment (AME). Detimage is the product of a European Laboratory for
-Nuclear Research (CERN) in Geneva, Switzerland-based Collaboration, of which the U.S.
-Regionally Accredited University #2 is one of only two U.S. institutions that are members. The
-other member is the Space Exploration Institute at Top U.S. University #1, but their interests are
-in imaging rather than space radiation dosimetry, meaning that expertise with this particular
-technology is currently lacking in the U.S. Dr. Novak has been working closely with our TNA
-colleagues over the last 6 months on this AME, and they have expressed their crucial dependence
-upon his expertise to enable the success of this current test. In addition he has assembled by
-himself the required a calibration facility for this spaceflight hardware here on the U.S. Regionally
-Accredited University #2 campus and he has been a crucial member of the team that is preparing
-the software for analysis of the data that has just started to arrive from those units. It is fair to say
-that we would not be in the position we are to support this project were he not available.
-Beyond the current deployment of this technology on the ISS, Dr. Novak has become a critical
-person advising our TNA colleagues on the design and development of the next generation of
-operational radiation monitoring devices that are to be deployed on the new U.S. manned
-spacecraft, the Space Rocket. It is clear that the project would be seriously challenged to remain
-on schedule without his inputs and guidance.
+I am writing this letter of support for SM Amin Gilani with respect to his Permanent Residency application in the category EB-2 National Interest Waiver.
 
-For the foreseeable future, it is clear that TNA will continue to have a critical need for his skills
-and especially his familiarity with this technology. They have been impressed enough to indicate
-to me their interest in hiring him permanently should he attain Permanent Residency status. While
-that prospect by itself argues strongly for the approval of his petition, there are other potential
-uses for this technology in the area of medical imaging that are just beginning to be developed
-here in the U.S. The Detimage technology provides the prospect of delivering the capability to
-produce what are effectively “color” x-ray images. A number of U.S. companies are investigating
-basing next generation devices on this technology, making Dr. Novak’s value to them potentially
-very great. The newest generation of the technology is just becoming available now, and bringing
-it to bear to improve a number of issues with respect to the current medical imaging technology is
-going to become increasingly important in the coming years.
+<!-- REPLACE THIS ENTIRE PARAGRAPH
 
-Dr, Novak has shown himself to be an innovative and resourceful researcher and a highly
-competent individual in the area of electronic pixel detectors. He is also a very congenial fellow
-and a diligent worker. I dread losing him in the future, but I recognize that person’s of this caliber
-will be highly sought after.
+Talk a bit about yourself, your accomplishments, and the USCIS should listen to you. Don't be humble. Talk about everything awesome you've ever done.
 
-In short, I strongly recommend for the benefit of the nation in that he will continue to be an
-important player in the field both for TNA in the immediately foreseeable future, but also in allied
-fields of great importance to humanity, that Dr. Novak’s petition for Permanent Residency be
-approved. Please do not hesitate to contact me further should you require any further information.
+Talk about the responsibilities you've taken in your life, the kind of projects you've contributed to, and the kind of work you've done.
 
-Respectfully,
+Sample:
+
+My name is Steve Jobs. In 1976 I co-founded Apple, a company that went on to dominate the global technology industry and in 2017 became the most valuable company of all time. After founding Apple I also contributed to several other major companies such as NeXT, a company that was bought by Apple in 1997, and funded what is now known as Pixar, a computer animation company.
+
+REPLACE THIS ENTIRE PARAGRAPH -->
+
+<!-- REPLACE THIS ENTIRE PARAGRAPH
+
+Talk a bit about yourself, your accomplishments, and why the USCIS should listen to you. Don't be humble. Talk about everything awesome you've ever done. (COMMENT: You mean to say talk a bit about you, Amin, and how we know you, no?)
+
+Talk about the responsibilities you've taken in your life, the kind of projects you've contributed to, and the kind of work you've done.
+
+Sample:
+
+I first met Amin in the fall of 2015 in San Mateo, as a startup founder for a Silicon Valley VC funded company. Amin spent most of his nights working on his company software, and would sometimes work out of the office for days, straight, without regard to his personal health. I believe Amin is one of the most passionate founders I have met and when driven, does not rest until he has achieved his tasks.
+
+REPLACE THIS ENTIRE PARAGRAPH -->
+
+While I do not know Amin very well personally, I am very familiar with his knowledge of software engineering, his entrepreneurial spirit and his various contributions to open source projects in the form of reports and code. Amin has proven himself to be an expert engineer having won multiple international and hackathons, and by passing screening for Toptal, a US engineering firm that approves less than 3% of applicants; making it more selective about its partners than the Navy SEALs. Amin has also proven his recognition in the entrepreneurial ecosystem by having his startup picked out of over 2,000 in 2015 by Plan9, Pakistan and over 300 possible software solutions by Boost VC.
+
+The US has one of the greatest entrepreneurial environments in the world, and according to a non-partisan study, 51% of billion-dollar companies were founded by immigrant founders[^1] and a report by the Office of Legislative Research, CT summarizes “Startups are the primary driver of job growth in the U.S. economy, accounting for nearly all net job growth.”[^2] Venture Capitalists have known this for a long time and Sam Altman, president Y Combinator has been advocating for new class of entrepreneurial visas for years[^3]. It is in the national interest of the United States to remain a leader in the global business sector, and to support new businesses and immigrant founders as the driver of job growth in our economy.
+
+To ensure the success of the development of technology related startup businesses, the availability of experts such as Amin is critical. In fact, Amin’s continued availability for consultation, and leadership in many startup businesses and engineering projects has been vital for their success.
+
+In short, I strongly recommend, in the national interest of the United States, that SM Amin Gilani’s application for Permanent Residency in category EB-2 National Interest Waiver be approved. I have no doubt he would be an asset to the United States and to the industry he works in. I can be reached by phone or email if any further information is necessary.
+
+References:
+
+[^1]: "Immigrants and Billion Dollar Startups - NFAP." http://nfap.com/wp-content/uploads/2016/03/Immigrants-and-Billion-Dollar-Startups.NFAP-Policy-Brief.March-2016.pdf. Accessed 20 Aug. 2017.
+
+[^2]: "job creation by startups and young companies - Connecticut General ...." 26 Jan. 2016, https://www.cga.ct.gov/2016/rpt/pdf/2016-R-0003.pdf. Accessed 20 Aug. 2017.
+
+[^3]: "The Founder Visa (again) - Sam Altman." 17 Mar. 2014, http://blog.samaltman.com/the-founder-visa-again. Accessed 20 Aug. 2017.
