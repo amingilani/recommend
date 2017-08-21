@@ -12,4 +12,4 @@
 //
 //= require rails-ujs
 //= require ./cable.js
-//= require_tree ./controllers/
+//= require_tree ./controllers
