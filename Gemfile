@@ -20,6 +20,7 @@ gem 'delayed_job_active_record'
 gem 'daemons'
 gem 'telephone_number'
 gem 'devise'
+gem "haml-rails"
 
 # pdf generation
 gem 'wicked_pdf'
