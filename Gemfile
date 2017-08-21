@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem "letter_opener"
+  gem 'rails_real_favicon'
 end
 
 group :development do
