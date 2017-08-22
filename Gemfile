@@ -21,6 +21,7 @@ gem 'daemons'
 gem 'telephone_number'
 gem 'devise'
 gem "haml-rails"
+gem 'font-awesome-sass'
 
 # pdf generation
 gem 'wicked_pdf'
