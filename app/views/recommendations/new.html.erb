@@ -34,7 +34,7 @@
           Change the letter however you like. Make it your own. The template is meant to help you get started, but you're welcome to change it entirely if you feel.
         </li>
       </ol>
-      <p><strong>Thank you</strong> for taking the time to recommend me. Your 5 minutes will help change my life.</p>
+      <p><em>You don't have to be a US citizen to recommend me!</em> <strong>Thank you</strong> for taking the time to recommend me. Your 5 minutes will help change my life.</p>
     </div>
         <p class="indented">
           United States Citizenship and Immigration Services<br>
@@ -72,7 +72,7 @@
           </div>
           <%= f.input :address_city, label: 'City', placeholder: 'San Francisco' %>
           <div class="ui two fields">
-          <%= f.input :address_state, label: 'State / Province', placeholder: 'CA', input_html: {class: 'ui search addable selection dropdown'}, collection: us_states %>
+          <%= f.input :address_state, label: 'State / Province - choose from list or enter manually', placeholder: 'CA', input_html: {class: 'ui search addable selection dropdown'}, collection: us_states %>
           <%= f.input :address_zip, label: 'Zip / Postal', placeholder: '94104' %>
           </div>
           <%= f.input :address_country, label: 'Country', placeholder: 'USA', input_html: {class: 'ui search selection dropdown'} %>
