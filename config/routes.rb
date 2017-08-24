@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :staffs, controllers: {
     sessions: 'staffs/sessions'
   }
+
   root 'static_pages#home'
 
   resources :recommendations, param: :slug
@@ -12,5 +13,7 @@ Rails.application.routes.draw do
   get '/recommendations/:slug/done'    => 'recommendations#done',    as: :done_recommendation
 
   post 'hooks/get_accept' => 'hooks/get_accept#notification'
+
+  get '/baby', to: redirect('/staffs/sign_in')
 
 end
