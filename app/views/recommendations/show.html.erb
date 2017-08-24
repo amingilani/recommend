@@ -13,9 +13,10 @@
         <% end %>
 
         Email: <%= @recommendation.email %><br >
-        <%= @recommendation.address_line_1 %>
         <% if @recommendation.address_line_2.present? %>
-        , <%= @recommendation.address_line_2 %>
+          <%= @recommendation.address_line_1 %>, <%= @recommendation.address_line_2 %>
+        <% else %>
+          <%= @recommendation.address_line_1 %>
         <% end %>
         <br >
         <%= @recommendation.address_city %>,
