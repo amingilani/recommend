@@ -1,0 +1,14 @@
+%h1 Dashboard
+%table.ui.very.basic.collapsing.celled.table
+  %thead
+    %tr
+      %th Name
+  %tbody
+    - @recommendations.each do |r|
+      %tr
+        %td
+          %h4.ui.image.header
+            .content
+              =r.name
+              .sub.header
+                =link_to 'Read', r
