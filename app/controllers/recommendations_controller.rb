@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+## The magical place where recommendations happen
+## https://recommend.gilani.me
 class RecommendationsController < ApplicationController
   before_action :set_recommendation, only: %i(show deliver done edit update)
 
