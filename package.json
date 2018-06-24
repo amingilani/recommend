@@ -2,7 +2,7 @@
   "name": "recommend",
   "private": true,
   "dependencies": {
-    "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome-free": "^5.1.0",
     "jquery": "~>3.0.0",
     "jquery.scrollex": "^0.2.1",
     "jquery.scrolly": "^0.0.1",
