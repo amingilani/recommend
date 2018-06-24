@@ -36,29 +36,43 @@
           %h2 Who are you?
           %p
             My name is
-            = succeed "." do
+            = succeed "," do
               %strong SM Amin Gilani
-            %em Pakistan
-            and a software engineer, even though I graduated with a Bachelors
-            degree in Economics and Finance in 2015. During my twenty-five years, I've won
+            I’m from
+            = succeed "." do
+              %em Pakistan
+
+            I did my undergrad in Economics and Finance but soon realized my
+            interest and passion lay in writing code, and ended up becoming a
+            self-taught software engineer.
+          %p
+            During my twenty-six years, I've won
             = succeed "," do
               %strong two hackathons
-            %strong three startup
-            projects,
-            raised funds from a Silicon Valley VC, qualified as the
-            %strong top 3%
-            in software engineering talent. I'm currently working as co-founder & CTO
+
+            started
+
+            = succeed "," do
+              %strong three startups
+            raised funds from a
+            = succeed "," do
+              %a{href: 'https://www.boost.vc', target: '_blank'}Silicon Valley Blockchain VC
+            and became part of the
+            %a{href: 'https://www.toptal.com/top-3-percent#contract-just-respected-software-architects', target: '_blank'}top 3%
+            in freelance software engineering talent. I'm currently working as Co-founder & CTO
             = succeed '.' do
               %a{:href => "https://nazdeeq.com"} Nazdeeq.com
-            And I just got engaged. Sorry ladies.
+            And, I just got married.
+
           %div{:style => "text-align: left; width: fit-content; margin: 0 auto;"}
-            %i.fa.fa-file-o
+            %i.icon.fa-file
             %a{href: 'http://bit.ly/2ij1dVH'} Resume
             |
-            %i.fa.fa-github
-            %a{href: 'https://github.com/amingilani/chronopill'} Code
+            %i.icon.fa-github
+            %a{href: 'https://github.com/amingilani'} Code
             |
-            %i.fa.fa-lock
+            %i.icon.fab.fa-keybase
+            &nbsp;
             %a{href: 'https://keybase.io/gilani'} Keybase
           .index.align-left
             / Unordered List
@@ -71,22 +85,23 @@
                     Graduated BSc Economics &amp; Finance. LSE, Pakistan
                     %strong — 2015
                   %li
-                    Winner Coinbase Bithack II Hackathon
+                    Winner Coinbase Bithack II (Hackathon)
                     %strong — 2015
                   %li
                     Founder - Payload, incubated at Plan9, Pakistan
                     %strong — 2015
                   %li
-                    Winner Thowathon I Hackathon
+                    Winner Thowathon I (Hackathon)
                     %strong — 2015
                   %li
-                    Founder - Mailpenny, accelerated &amp; Funded by Boost VC, San Mateo
+                    Founder - Mailpenny, Accelerated &amp; Funded by Boost VC, San Mateo
                     %strong — 2016
                   %li
                     Joined Toptal's network of the top 3% in talent
                     %strong — 2016
                   %li
-                    Engaged
+                    %s Engaged
+                    Married
                     %strong — 2017
                   %li
                     Co-founder &amp; CTO
@@ -195,22 +210,23 @@
             .inner
               %ul.icons
                 %li
-                  %a.icon.style2.fa-twitter{:href => "https://twitter.com/amingilani"}
+                  %a.icon.fa-twitter{:href => "https://twitter.com/amingilani"}
                     %span.label Twitter
                 %li
-                  %a.icon.style2.fa-hacker-news{:href => "https://news.ycombinator.com/user?id=amingilani"}
+                  %a.icon.fa-hacker-news{:href => "https://news.ycombinator.com/user?id=amingilani"}
                     %span.label Facebook
                 %li
-                  %a.icon.style2.fa-github{:href => "https://github.com/amingilani"}
+                  %a.icon.fa-github{:href => "https://github.com/amingilani"}
                     %span.label Instagram
                 %li
-                  %a.icon.style2.fa-linkedin{:href => "https://linkedin.com/in/amingilani"}
+                  %a.icon.fa-linkedin{:href => "https://linkedin.com/in/amingilani"}
                     %span.label LinkedIn
                 %li
-                  %a.icon.style2.fa-lock{:href => "https://keybase.io/gilani"}
-                    %span.label Email
+                  %a{:href => "https://keybase.io/gilani"}
+                    %i.icon.fab.fa-keybase{:href => "https://keybase.io/gilani"}
+                      %span.label Keybase
                 %li
-                  %a.icon.style2.fa-envelope{:href => "mailto:recommend@gilani.me"}
+                  %a.icon.fa-envelope{:href => "mailto:recommend@gilani.me"}
                     %span.label Email
               %p
                 © Amin Shah Gilani. Design:
